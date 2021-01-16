@@ -1,4 +1,5 @@
 def solution(array, commands):
+    
     answer = []
     for i in commands:
         ans=array[i[0]-1:i[1]]

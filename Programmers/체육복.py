@@ -6,4 +6,5 @@ def solution(n, lost, reserve):
             lost_set.remove(r-1)
         elif r+1 in lost_set:
             lost_set.remove(r+1)
+            
     return n-len(lost_set)

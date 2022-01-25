@@ -26,6 +26,7 @@ for _ in range(t):
                 dfs(x + dx[i], y + dy[i])
             return True
         return False
+    
     cnt = 0
     for i in range(n):
         for j in range(m):

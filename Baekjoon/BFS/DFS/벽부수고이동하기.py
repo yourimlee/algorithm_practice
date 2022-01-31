@@ -21,11 +21,11 @@ def bfs():
         for i in range(4):
             nx, ny = x + dx[i], y + dy[i]
             if 0 <= nx < n and 0 <= ny < m:
-                # 벽이 있고, 뚫을 수 있다면
+                # 벽이 있고, 뚫을 수 있는 경우
                 if graph[nx][ny] == 1 and z == 1:
                     visited[nx][ny][0] = visited[x][y][1] + 1
                     q.append([nx, ny, 0])
-                # 이동할 수 있고, 방문안했고, 벽 뚫을 수 없다면
+                # 이동할 수 있고, 방문안했고, 벽 뚫을 수 없는 경우
                 elif graph[nx][ny] == 0 and visited[nx][ny][z] == 0:
                     visited[nx][ny][z] = visited[x][y][z] + 1
                     q.append([nx, ny, z])

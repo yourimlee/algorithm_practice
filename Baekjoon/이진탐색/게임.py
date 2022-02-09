@@ -6,6 +6,7 @@ if z >= 99:
 else:
     start, end = 1, int(x)
     game = 0
+    
     while start <= end:
         mid = (start + end) // 2
         if (y + mid) * 100 // (x + mid) <= z:

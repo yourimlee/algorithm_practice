@@ -1,23 +1,26 @@
 import sys
 
-# 리스트 순번으로 이진탐색
-def bin(li1, i):
-    start, end = 0, len(li1) - 1
-    mid = (start + end) // 2
-    while start <= end:
-        if li1[mid] == i:
-            return 1
-        elif li1[mid] < i:
-            start = mid + 1
-        else:
-            end = mid - 1
-    return 0
-        
-for _ in range(int(sys.stdin.readline())):
+t = int(input())
+
+def binary():
     n = int(sys.stdin.readline())
-    li1 = list(map(int, sys.stdin.readline().split()))
-    li1.sort()
+    li1 = sorted(list(map(int, sys.stdin.readline().split())))
     m = int(sys.stdin.readline())
     li2 = list(map(int, sys.stdin.readline().split()))
-    for i in li2:
-        print(bin(li1, i))
+    
+    for value in li2:
+        start, end = 0, len(li1) - 1
+        while start <= end:
+            is_found = False
+            mid = (start + end) // 2
+            if li1[mid] == value:
+                is_found = True
+                break
+            elif li1[mid] < value:
+                start = mid + 1
+            else:
+                end = mid - 1
+        print(1 if is_found == True else 0)
+        
+for _ in range(t):
+    binary()

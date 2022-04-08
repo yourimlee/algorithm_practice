@@ -22,5 +22,5 @@ def solution(s):
             c += tmp
 
         result.append(len(c))
-        
+
     return min(result)

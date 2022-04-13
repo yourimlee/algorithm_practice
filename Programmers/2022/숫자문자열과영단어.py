@@ -5,5 +5,5 @@ def solution(s):
             if strings[i][0] in s:
                 s = s.replace(strings[i][0], strings[i][1])
         return int(s)
-    
+  
     return int(s)

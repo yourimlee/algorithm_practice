@@ -16,4 +16,5 @@ def solution(answers):
     if res[0][1] == res[1][1]: answer.append(res[1][0])
     if res[0][1] == res[2][1]: answer.append(res[2][0])
 
+        
     return answer
